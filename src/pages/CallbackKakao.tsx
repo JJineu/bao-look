@@ -31,21 +31,15 @@ const CallbackKakao = () => {
 
   useEffect(() => {
     if (code) {
-      axios
-        .post('/api/oauth/authorize', {
-          authorizationCode: code,
-        })
-        .then(res => {
-          console.log(res);
-        });
-      // kakaoLogin(code).then((res: unknown) => {
-      //   res &&
-      //     setAuthState({
-      //       ...(res as IAuthStore),
-      //     });
-      // });
+      kakaoLogin(code).then(res => {
+        res &&
+          setAuthState({
+            ...(res as unknown as IAuthStore),
+          });
+      });
+
     }
-  }, [authState, code, setAuthState]);
+  }, [code, setAuthState]);
 
   return (
     <Layout>

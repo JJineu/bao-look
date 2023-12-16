@@ -10,6 +10,10 @@ export const URLS = {
   CHAT: '/api/chat',
   CHAT_LIST: '/api/chat/list',
   CHAT_RECENT: '/api/chat/message',
+  CALENDAR: '/api/calendar/dday',
+  ROLLING_PAPER: '/api/paper',
+  ROLLING_PAPER_LIST: '/api/paper/list',
+  MEMBER: '/api/member/dday',
 } as const;
 
 export const KAKAO_LOGIN_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${VITE_KAKAO_REST_API_KEY}&redirect_uri=${URLS.KAKAO_CALLBACK_URL}&response_type=code`;
