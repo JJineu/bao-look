@@ -35,7 +35,7 @@ const ChatBox = () => {
         <div>워토우 더 먹고싶다바오</div>
       </StateMessage>
 
-      {!recentMessage ? (
+      {recentMessage ? (
         <MessageBox2 onClick={moveChat}>
           <Newly>최근 메시지</Newly>
           <MessagePhrases>{recentMessage}</MessagePhrases>
