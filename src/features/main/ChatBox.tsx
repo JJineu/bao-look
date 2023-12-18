@@ -35,7 +35,7 @@ const ChatBox = () => {
         <div>워토우 더 먹고싶다바오</div>
       </StateMessage>
 
-      {recentMessage ? (
+      {!recentMessage ? (
         <MessageBox2 onClick={moveChat}>
           <Newly>최근 메시지</Newly>
           <MessagePhrases>{recentMessage}</MessagePhrases>
@@ -137,6 +137,7 @@ const MessageBox2 = styled.div`
 `;
 
 const Newly = styled.span`
+  min-width: 80px;
   font-size: 15px;
   color: ${COLORS.PRIMARY_600};
 `;
